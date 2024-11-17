@@ -6,99 +6,151 @@
     <title>Chapter-2</title>
     <style>
         /* Import Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
         /* General Styling */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f5f7fa;
-            color: #333;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
             flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Styling for Collapsible Buttons */
+        h1 {
+            margin: 20px 0;
+            font-size: 2rem;
+            color: #f5f7fa;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Collapsible Button Styling */
         .collapsible {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
-            color: white;
+            background: linear-gradient(135deg, #42e695, #3bb2b8);
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
             cursor: pointer;
-            padding: 18px;
-            width: 100%;
             border: none;
-            text-align: left;
-            outline: none;
-            font-size: 18px;
-            margin: 5px 0;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 15px 20px;
+            width: 90%;
+            max-width: 800px;
+            margin: 10px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
         .collapsible:hover {
-            background: linear-gradient(135deg, #feb47b, #ff7e5f);
-            transform: scale(1.02);
+            transform: translateY(-3px) scale(1.02);
+            background: linear-gradient(135deg, #3bb2b8, #42e695);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         .active {
-            background: linear-gradient(135deg, #ff5f6d, #ffc371);
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
         }
 
         /* Content Section Styling */
         .content {
-            padding: 0 18px;
             display: none;
-            overflow: hidden;
-            background-color: #fafafa;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px;
-            transition: max-height 0.3s ease, opacity 0.3s ease;
+            padding: 15px;
+            width: 90%;
+            max-width: 800px;
+            margin: 10px auto;
+            background: #ffffff;
+            color: #333333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
         }
 
         .content p, .content pre {
+            margin: 10px 0;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .content pre {
+            background: #f9f9f9;
             padding: 15px;
-            line-height: 1.6;
+            border-radius: 8px;
+            overflow-x: auto;
         }
 
         /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         th, td {
-            padding: 12px;
+            padding: 15px;
             text-align: left;
-            border: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
         }
 
         th {
-            background-color: #f2f2f2;
-            color: #333;
+            background: #3bb2b8;
+            color: #ffffff;
             font-weight: 700;
         }
 
+        tr:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+        pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 16px;
+            white-space: pre-wrap; /* Responsive text wrap */
+            word-wrap: break-word;
+        } @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            pre {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+            pre {
+                font-size: 12px;
+            }
+        }
+
+
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
+          
             .collapsible {
-                font-size: 16px;
+                font-size: 18px;
+            }
+
+            .content pre {
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <button type="button" class="collapsible">What is Character ?</button>
+  <button type="button" class="collapsible">What is Character ?</button>
     <div class="content">
     <pre>
 
@@ -364,6 +416,5 @@
             });
         });
     </script>
-
 </body>
 </html>
